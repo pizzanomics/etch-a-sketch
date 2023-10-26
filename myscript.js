@@ -9,12 +9,16 @@ canvasInitialiser.addEventListener('click', () => {
 
         for (let i = 0; i < totalSquares; i++) {
         const square = document.createElement('div');
-        square.textContent = "foobar"
         square.classList.add('grid-square');
         canvas.appendChild(square);
-        }
+        
 
-        canvas.style.border = "2px solid black"
+        canvas.style.border = "2px solid black";
+
+        square.addEventListener('mouseover', () => {
+                square.style.backgroundColor = "red";
+            });
+        }
     
 });
 
